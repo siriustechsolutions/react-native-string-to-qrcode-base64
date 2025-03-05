@@ -10,15 +10,18 @@ npm install string-to-qrcode-base64
 
 ## Usage
 
-
 ```js
-import { multiply } from 'string-to-qrcode-base64';
+import { generateQRCode } from 'string-to-qrcode-base64';
 
 // ...
 
-const result = await multiply(3, 7);
-```
+const result = await generateQRCode('Qr Code Text');
 
+<Image
+    source={{ uri: `data:image/png;base64,${qrCode}` }}
+    style={{ width: 200, height: 200 }}
+/>
+```
 
 ## Contributing
 

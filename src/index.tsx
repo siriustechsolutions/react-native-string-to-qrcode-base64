@@ -17,6 +17,6 @@ const StringToQrcodeBase64 = NativeModules.StringToQrcodeBase64
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return StringToQrcodeBase64.multiply(a, b);
+export function generateQRCode(text: string): Promise<string> {
+  return StringToQrcodeBase64.generateQRCode(text);
 }

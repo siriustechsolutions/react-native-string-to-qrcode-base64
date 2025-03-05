@@ -1,25 +1,63 @@
-import { multiply } from 'string-to-qrcode-base64';
-import { Text, View, StyleSheet } from 'react-native';
+import { generateQRCode } from 'string-to-qrcode-base64';
 import { useState, useEffect } from 'react';
+import {
+  Text,
+  View,
+  StyleSheet,
+  SafeAreaView,
+  ScrollView,
+  Image,
+} from 'react-native';
 
 export default function App() {
-  const [result, setResult] = useState<number | undefined>();
+  const [qrCode, setQrCode] = useState<string>('');
 
   useEffect(() => {
-    multiply(3, 7).then(setResult);
+    generateQRCode('Hello World').then(setQrCode).catch(console.error);
   }, []);
 
   return (
-    <View style={styles.container}>
-      <Text>Result: {result}</Text>
-    </View>
+    <SafeAreaView style={styles.safeArea}>
+      <ScrollView contentContainerStyle={styles.scrollView}>
+        <View style={styles.container}>
+          <Text style={styles.title}>QR Code Generator</Text>
+          <Image
+            source={{ uri: `data:image/png;base64,${qrCode}` }}
+            style={styles.image}
+          />
+          <Text style={styles.qrCodeText}>QR Code: {qrCode}</Text>
+        </View>
+      </ScrollView>
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
+  safeArea: {
+    flex: 1,
+    backgroundColor: '#f0f0f0',
+  },
+  scrollView: {
+    flexGrow: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 20,
+  },
+  qrCodeText: {
+    fontSize: 16,
+    color: '#333',
+  },
   container: {
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  image: {
+    width: 200,
+    height: 200,
   },
 });
