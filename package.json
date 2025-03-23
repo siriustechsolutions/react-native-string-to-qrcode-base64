@@ -1,5 +1,5 @@
 {
-  "name": "string-to-qrcode-base64",
+  "name": "react-native-string-to-qrcode-base64",
   "version": "0.1.0",
   "description": "React Native String to QR Base64 is a lightweight and efficient library that converts any given string into a QR code and returns its Base64 representation. This allows seamless integration with image components and easy sharing across different platforms. The library is optimized for performance and works smoothly in React Native environments.",
   "source": "./src/index.tsx",
@@ -52,14 +52,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/raulti/string-to-qrcode-base64.git"
+    "url": "git+https://github.com/siriustechsolutions/react-native-string-to-qrcode-base64.git"
   },
   "author": "Raul Oliveira <raulalvesd@hotmail.com> (https://github.com/raulti)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/raulti/string-to-qrcode-base64/issues"
+    "url": "https://github.com/siriustechsolutions/react-native-string-to-qrcode-base64/issues"
   },
-  "homepage": "https://github.com/raulti/string-to-qrcode-base64#readme",
+  "homepage": "https://github.com/siriustechsolutions/react-native-string-to-qrcode-base64#readme",
   "publishConfig": {
     "registry": "https://registry.npmjs.org/"
   },

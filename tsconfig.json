@@ -2,7 +2,7 @@
   "compilerOptions": {
     "rootDir": ".",
     "paths": {
-      "string-to-qrcode-base64": ["./src/index"]
+      "react-native-string-to-qrcode-base64": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,

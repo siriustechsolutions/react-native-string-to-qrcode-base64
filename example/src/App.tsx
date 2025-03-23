@@ -1,4 +1,4 @@
-import { generateQRCode } from 'string-to-qrcode-base64';
+import { generateQRCode } from 'react-native-string-to-qrcode-base64';
 import { useState, useEffect } from 'react';
 import {
   Text,
